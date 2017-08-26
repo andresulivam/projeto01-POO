@@ -69,4 +69,35 @@ public class NotaFiscal {
 		return itensNotaFiscal.size();
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		NotaFiscal other = (NotaFiscal) obj;
+		if (cliente == null) {
+			if (other.cliente != null)
+				return false;
+		} else if (!cliente.equals(other.cliente))
+			return false;
+		if (dataEmissao == null) {
+			if (other.dataEmissao != null)
+				return false;
+		} else if (!dataEmissao.equals(other.dataEmissao))
+			return false;
+		if (itensNotaFiscal == null) {
+			if (other.itensNotaFiscal != null)
+				return false;
+		} else if (!itensNotaFiscal.equals(other.itensNotaFiscal))
+			return false;
+		return true;
+	}
+	
+
 }

@@ -27,5 +27,24 @@ public class TesteNotaFiscal {
 		// assert
 		assertEquals(60, valorTotal, 0);
 	}
+	
+	/**
+	 * {@inheritDoc}
+	 */
+	@Test
+	public void testarEquals() {
+		//setup
+		Cliente cliente = new Cliente("Cliente 1", Calendar.getInstance());
+		NotaFiscal notaFiscal1 = PovoadorNotaFiscal.povoarNotaFiscal(cliente, 2);
+		NotaFiscal notaFiscal2 = PovoadorNotaFiscal.povoarNotaFiscal(cliente, 2);
+		
+		Calendar c = Calendar.getInstance();
+		notaFiscal1.setDataEmissao(c);
+		notaFiscal2.setDataEmissao(c);
+		
+		//assert
+		assertEquals(notaFiscal1, notaFiscal2);
+		
+	}
 
 }
