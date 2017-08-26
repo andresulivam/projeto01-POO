@@ -43,8 +43,8 @@ public class NotaFiscal {
 	/**
 	 * @return Retorna o valor total de itens da nota
 	 */
-	public double ValorTotal() {
-		double result = 0;
+	public Double calcularValorTotal() {
+		Double result = 0d;
 		for(int i = 0; i < itensNotaFiscal.size(); i++){
 			result += itensNotaFiscal.get(i).calcularValorTotal();
 		}
@@ -55,7 +55,7 @@ public class NotaFiscal {
 	 * Adiciona itens a lista
 	 * @param item
 	 */
-	public void AdicionarItemNaNota(ItemNotaFiscal item){
+	public void adicionarItemNaNota(ItemNotaFiscal item){
 		if(item != null){
 			itensNotaFiscal.add(item);
 		}

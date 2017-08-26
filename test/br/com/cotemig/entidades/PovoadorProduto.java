@@ -1,21 +1,18 @@
 package br.com.cotemig.entidades;
 
 /**
- * @author curso01
- *
+ * @author andresulivam
  */
 public class PovoadorProduto {
 	static Integer contador = 1;
 	
 	/**
-	 * Retorna 1 produto
-	 * @return
+	 * @author andresulivam
 	 */
 	public static Produto povoarProduto(ItemNotaFiscal itemNotaFiscal){
-		Produto produto = new Produto(contador.toString());
-		produto.setItemNotaFiscal(itemNotaFiscal);
+		Produto produto = new Produto(contador.toString(), itemNotaFiscal);
 		contador++;
-		return produto;
+		return produto;	
 	}
 
 }

@@ -9,19 +9,12 @@ public class ItemNotaFiscal {
 	private Integer quantidade;
 	private Double valorUnitario;
 	private Produto produto;
+	private NotaFiscal notaFiscal;
 		
 	public ItemNotaFiscal() {
 		super();
 	}
 	
-	/**
-	 * Construtor
-	 * @param produto
-	 */
-	public ItemNotaFiscal(Produto produto) {
-		super();
-		this.produto = produto;
-	}
 	public Integer getQuantidade() {
 		return quantidade;
 	}
@@ -43,6 +36,14 @@ public class ItemNotaFiscal {
 		this.produto = produto;
 	}
 	
+	public NotaFiscal getNotaFiscal() {
+		return notaFiscal;
+	}
+
+	public void setNotaFiscal(NotaFiscal notaFiscal) {
+		this.notaFiscal = notaFiscal;
+	}
+
 	/**
 	 * @return valor total do item X quantidade
 	 */
