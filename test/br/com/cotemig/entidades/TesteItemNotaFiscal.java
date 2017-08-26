@@ -28,5 +28,38 @@ public class TesteItemNotaFiscal {
 		// assert
 		assertEquals(60, valorTotal, 0);
 	}
+	
+	@Test
+	public void testarCalcularValorTotal2() {
+		// setup
+		Cliente cliente = new Cliente("Cliente 1", Calendar.getInstance());
+		NotaFiscal notaFiscal = new NotaFiscal(cliente);
+		ItemNotaFiscal itemNotaFiscal = PovoadorItemNotaFiscal.povoarItemNotaFiscal(3, notaFiscal, 20d);
+		
+		itemNotaFiscal.setQuantidade(null);
+		
+		// execuçãoo
+		double valorTotal = itemNotaFiscal.calcularValorTotal();
+
+		// assert
+		assertNotEquals(60, valorTotal, 0);
+	}
+
+	
+	@Test
+	public void testarCalcularValorTotal3() {
+		// setup
+		Cliente cliente = new Cliente("Cliente 1", Calendar.getInstance());
+		NotaFiscal notaFiscal = new NotaFiscal(cliente);
+		ItemNotaFiscal itemNotaFiscal = PovoadorItemNotaFiscal.povoarItemNotaFiscal(3, notaFiscal, 20d);
+		
+		itemNotaFiscal.setValorUnitario(null);
+		
+		// execuçãoo
+		double valorTotal = itemNotaFiscal.calcularValorTotal();
+
+		// assert
+		assertNotEquals(60, valorTotal, 0);
+	}
 
 }

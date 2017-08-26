@@ -41,6 +41,20 @@ public class NotaFiscal {
 	}
 
 	/**
+	 * @return the itensNotaFiscal
+	 */
+	public ArrayList<ItemNotaFiscal> getItensNotaFiscal() {
+		return itensNotaFiscal;
+	}
+
+	/**
+	 * @param itensNotaFiscal the itensNotaFiscal to set
+	 */
+	public void setItensNotaFiscal(ArrayList<ItemNotaFiscal> itensNotaFiscal) {
+		this.itensNotaFiscal = itensNotaFiscal;
+	}
+
+	/**
 	 * @return Retorna o valor total de itens da nota
 	 */
 	public Double calcularValorTotal() {
