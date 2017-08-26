@@ -21,7 +21,7 @@ public class PovoadorNotaFiscal {
 		
 		/* Adicionando elementos a nota fiscal */
 		for(int i = 0; i < quantidadeItensNotaFiscal; i++){
-			d.adicionarItemNaNota(PovoadorItemNotaFiscal.povoarItemNotaFiscal(i, d));
+			d.adicionarItemNaNota(PovoadorItemNotaFiscal.povoarItemNotaFiscal(1, d, 30d));
 		}
 		
 		return d;

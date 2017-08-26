@@ -1,7 +1,5 @@
 package br.com.cotemig.entidades;
 
-import java.util.Random;
-
 /**
  * @author andresulivam
  */
@@ -11,12 +9,11 @@ public class PovoadorItemNotaFiscal {
 	/**
 	 * @author andresulivam
 	 */
-	static ItemNotaFiscal povoarItemNotaFiscal(Integer quantidade, NotaFiscal notaFiscal) {
-		Random r = new Random();
+	static ItemNotaFiscal povoarItemNotaFiscal(Integer quantidade, NotaFiscal notaFiscal, Double valorUnitario) {
 		
 		ItemNotaFiscal d = new ItemNotaFiscal();
 		d.setQuantidade(quantidade);
-		d.setValorUnitario(20 + r.nextDouble()* 20);
+		d.setValorUnitario(valorUnitario);
 		d.setProduto(PovoadorProduto.povoarProduto(d));
 		d.setNotaFiscal(notaFiscal);
 		
